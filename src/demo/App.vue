@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <img id="vue-ico" :src="img">
-    <router-link to="/">首页</router-link>
-    <router-link to="/todo-list">待办事项</router-link>
+    <router-link to="/" replace>首页</router-link>
+    <router-link to="/todo-list" replace>待办事项</router-link>
     <transition name="fade" mode="out-in">
       <router-view/>
     </transition>

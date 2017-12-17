@@ -1,3 +1,4 @@
 import editorHtml from './editor.html'
+import css from './editor.less'
 
-export default () => {document.getElementById('root').innerHTML = editorHtml;}
+export default () => {document.body.innerHTML = editorHtml;}
