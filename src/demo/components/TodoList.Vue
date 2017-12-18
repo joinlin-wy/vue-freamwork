@@ -21,6 +21,7 @@
   }
   ul {
     font-size: 18px;
+    display: flex;
   }
   ul li{
 

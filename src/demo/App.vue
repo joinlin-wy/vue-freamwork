@@ -22,7 +22,6 @@
     },
     watch: {
       '$route' () {
-        console.log(this.$route)
         this.img = this.$route.name === 'list' ? cat : logo
       }
     }

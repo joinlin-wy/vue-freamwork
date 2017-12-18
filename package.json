@@ -1,7 +1,7 @@
 {
   "name": "vue-freamwork",
   "version": "1.0.0",
-  "description": "",
+  "description": "vue + webpack framework",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node server.js",
@@ -41,5 +41,10 @@
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "whatwg-fetch": "^2.0.3"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
