@@ -1,3 +1,31 @@
-body{
+html,body{
   background: #fffdda;
+  height: 100%;
+  margin: 0;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  .leftSide{
+    width: 50%;
+  }
+  .rightSide{
+    width: 50%;
+  }
+  label{
+    height: 5%;
+    margin-left: 5%;
+  }
+  #editor,#result{
+    width: 90%;
+    height: 95%;
+    margin-left: 5%;
+    resize: none;
+    background: #ffffff;
+    border: 1px solid #adadad;
+    padding: 3px;
+    overflow-y: scroll;
+  }
 }
