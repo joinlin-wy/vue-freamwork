@@ -4,7 +4,7 @@ const config = require('./config')
 //开发环境不压缩
 const webpackConfig = require('./webpack.dev.config')
 Object.keys(webpackConfig.entry).forEach(function (key) {
-    webpackConfig.entry[key].unshift("webpack-dev-server/client?http://localhost:" + config.dev.port, "webpack/hot/dev-server")
+    webpackConfig.entry[key].unshift("webpack-dev-server/client?http://0.0.0.0:" + config.dev.port, "webpack/hot/dev-server")
 })
 const server = new WebpackDevServer(webpack(webpackConfig), {
     inline: true,
@@ -17,7 +17,7 @@ const server = new WebpackDevServer(webpack(webpackConfig), {
 // server.app.get('*', function(req, res) {
 //     res.redirect('index.html')
 // });
-server.listen(config.dev.port, "localhost", function (e) {
+server.listen(config.dev.port, "0.0.0.0", function (e) {
     console.log('serving on http://localhost:' + config.dev.port)
 
     //通过系统进程自动打开浏览器访问

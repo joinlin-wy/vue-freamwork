@@ -18,10 +18,10 @@
 <style scoped>
   #todo-list{
     text-align: left;
+    margin-top: 50px;
   }
   ul {
     font-size: 18px;
-    display: flex;
   }
   ul li{
 
@@ -42,7 +42,7 @@
 <script>
   import listData from '../assets/list.json'
   export default {
-    name: 'TodoLst',
+    name: 'TodoList',
     data () {
       return {
         list: listData,

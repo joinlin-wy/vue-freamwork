@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <a href="javascript:" @click="add()">点我让下面那个家伙变大</a>
     <p>{{counter}}</p>
-    <input type="number" v-model="counter">
+    <input type="number" v-model="counter" title="请输入数字">
   </div>
 </template>
 

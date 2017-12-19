@@ -1,0 +1,24 @@
+<template>
+    <img :src="imgSrc" alt="">
+</template>
+
+<script>
+    export default {
+        name: "view-film",
+        props: ['imgSrc'],
+        data () {
+            return {
+
+            }
+        },
+        created () {
+
+        }
+    }
+</script>
+
+<style scoped>
+    img{
+        height: 360px;
+    }
+</style>
