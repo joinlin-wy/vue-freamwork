@@ -15,6 +15,6 @@ module.exports = merge(baseWebpackConfig, {
       'process.env': {NODE_ENV: '"development"'}
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({"name": "common", "filename": "common.bundle.js"}),//提取出公共模块并添加到html
+    new webpack.optimize.CommonsChunkPlugin({"name": "common", "filename": "common/common.js"}),//提取出公共模块并添加到html
   ].concat(config.plugins)
 });

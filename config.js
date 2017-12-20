@@ -15,6 +15,7 @@ const config = {
   },
   dev: {
     port: process.env.PORT || 8088,
+    cssSourceMap: false,
     autoOpenBrowser: false,
     assetsPublicPath: '/'
   }
