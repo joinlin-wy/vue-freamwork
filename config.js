@@ -14,7 +14,7 @@ const config = {
     productionSourceMap: true
   },
   dev: {
-    port: process.env.PORT || 8080,
+    port: process.env.PORT || 8088,
     autoOpenBrowser: false,
     assetsPublicPath: '/'
   }

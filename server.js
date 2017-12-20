@@ -7,7 +7,6 @@ Object.keys(webpackConfig.entry).forEach(function (key) {
     webpackConfig.entry[key].unshift("webpack-dev-server/client?http://0.0.0.0:" + config.dev.port, "webpack/hot/dev-server")
 })
 const server = new WebpackDevServer(webpack(webpackConfig), {
-    inline: true,
     publicPath: webpackConfig.output.publicPath,//相对路径
     hot: true
 })

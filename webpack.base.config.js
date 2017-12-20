@@ -2,7 +2,6 @@
 const path = require('path');
 const utils = require('./utils');
 const config = require('./config');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
@@ -39,7 +38,9 @@ module.exports = {
       },
     },{
       test: /\.js$/,
-      include: [path.resolve(__dirname, "src")],
+      include: [path.resolve(__dirname, "src"),
+          //含有const等关键字，也要转化
+          path.resolve(__dirname, "node_modules/webpack-dev-server")],
       loader: "babel-loader"
     }, {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
