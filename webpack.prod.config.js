@@ -5,7 +5,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const baseWebpackConfig = require('./webpack.base.config')
 const config = require('./config')
 const utils = require('./utils')
+const path = require('path');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = merge(baseWebpackConfig, {
@@ -40,6 +42,14 @@ module.exports = merge(baseWebpackConfig, {
         safe: true
       }
     }),
+      // 复制自定义的文件
+      new CopyWebpackPlugin([
+          {
+              from: path.resolve(__dirname, 'public'),
+              to: "public/",
+              ignore: ['.*']//忽略.xxx的文件
+          }
+      ]),
     //提取出公共模块并添加到html
     new webpack.optimize.CommonsChunkPlugin({"name": "common", "filename": "common/common.js"}),
     new webpack.optimize.UglifyJsPlugin({
