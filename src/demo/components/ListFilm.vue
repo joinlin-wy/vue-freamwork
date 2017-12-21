@@ -32,7 +32,7 @@
     .list-window {
         width: 1270px;
         height: 200px;
-        margin-top: 15px;
+        margin-top: 5px;
         overflow: hidden;
     }
 
@@ -56,7 +56,7 @@
             }
         }
         a:focus{
-            border-color: #ff0ca2;
+            border:1px solid #56ff4f;
             color: #fffdda;
         }
     }

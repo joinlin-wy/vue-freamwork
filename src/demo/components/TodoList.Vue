@@ -18,10 +18,10 @@
 <style scoped>
   #todo-list{
     text-align: left;
-    margin-top: 50px;
+    padding-top: 150px;
   }
   ol {
-    font-size: 18px;
+    font-size: 20px;
   }
   .first>a{
     text-decoration: none;

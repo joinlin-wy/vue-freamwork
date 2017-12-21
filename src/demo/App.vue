@@ -1,9 +1,11 @@
 <template>
     <div id="app">
         <img id="vue-ico" :src="img">
-        <router-link to="/" replace>首页</router-link>
-        <router-link to="/todo-list" replace>待办事项</router-link>
-        <router-link to="/film" replace>影片</router-link>
+        <nav class="nav">
+            <router-link to="/" replace>HOME</router-link>
+            <router-link to="/todo-list" replace>计划事项</router-link>
+            <router-link to="/film" replace>影片</router-link>
+        </nav>
         <transition name="fade" mode="out-in">
             <router-view/>
         </transition>
@@ -23,7 +25,7 @@
         },
         watch: {
             '$route'() {
-                this.img = this.$route.name === 'list' ? cat : logo
+                this.img = this.$route.name  ? cat : logo
             }
         }
     }
@@ -34,15 +36,13 @@
         margin: 0;
         width: 1280px;
         height: 720px;
-        background: linear-gradient(top, #cbfff8, #5a62ff) no-repeat;
+        background: linear-gradient(top, #cbfff8, #5a62ff) no-repeat
+        /*background: #eeffe0;*/
     }
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        margin-top: 10px;
     }
     #vue-ico {
         position: absolute;
@@ -53,14 +53,26 @@
     }
     a {
         color: inherit;
-    }
-    #app > a {
+        outline: none;
         text-decoration: none;
-        background: #d8d8d8;
-        border-radius: 3px;
-        padding: 5px;
     }
-    #app > a:hover{
+    nav{
+        position: absolute;
+        top: 0;
+        left: 70px;
+    }
+    nav > a {
+        display: inline-block;
+        background: rgba(216, 216, 216, 0.7);
+        border-radius: 0 0 5px 5px;
+        height: 20px;
+        padding: 5px;
+        margin: 0 5px;
+        font-size: 20px;
+        transition: height 0.3s;
+    }
+    nav > a:hover, nav > a:focus{
+        height: 25px;
         color: #dd510d;
     }
     ul {
