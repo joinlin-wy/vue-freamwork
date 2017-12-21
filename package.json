@@ -1,7 +1,7 @@
 {
-  "name": "vue-freamwork",
+  "name": "webpack-vue-freamwork",
   "version": "1.0.0",
-  "description": "vue + webpack framework",
+  "description": "vue + webpack framework,for multi-pages web app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node server.js",
