@@ -19,6 +19,6 @@
 
 <style scoped>
     img{
-        height: 360px;
+        height: 460px;
     }
 </style>

@@ -1,7 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin') //生成html
+//entry添加polyfill用以支持es6的一些内置对象如promise或静态方法如Object.assign等
 const entry = {
-    demo: ["./src/demo/app.js"],//一个入口对应一个HtmlWebpackPlugin
+    demo: ["babel-polyfill","./src/demo/app.js"],//一个入口对应一个HtmlWebpackPlugin
     editor: ["./src/editor/app.js"]
 }
 const config = {

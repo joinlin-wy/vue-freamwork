@@ -8,6 +8,7 @@
 <script>
     import ListFilm from "./ListFilm"
     import ViewFilm from "./ViewFilm"
+    import axios from 'axios'
 
     export default {
         components: {
@@ -23,10 +24,8 @@
             }
         },
         created() {
-            fetch('http://123.56.220.103:8080/VODService/getSuggestProgramOrder').then((response) => {
-                return response.json()
-            }).then((json) => {
-                this.data = json.programs
+            axios.get('http://123.56.220.103:8080/VODService/getSuggestProgramOrder').then((response) => {
+                this.data = response.data.programs
                 this.imgSrc = this.data[this.index].posters.big[0]
             },(error) => {console.log(error)})
         },

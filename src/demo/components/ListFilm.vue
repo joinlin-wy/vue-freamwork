@@ -1,13 +1,13 @@
 <template>
-    <div class="list">
-        <ul>
-            <li v-for="(film, index) in list" @click="setIndex(index)">
+    <div class="list-window">
+        <div class="list" :style="'width:'+list.length*122+'px'">
+            <a v-for="(film, index) in list" @click="setIndex(index)" href="javascript:">
                 <img :src="film.posters.big[0]">
                 <article>
                     {{film.title}}
                 </article>
-            </li>
-        </ul>
+            </a>
+        </div>
     </div>
 </template>
 
@@ -29,21 +29,24 @@
 </script>
 
 <style scoped lang="less">
-    .list {
-        width: 1000px;
-        height: 120px;
-        overflow-x: auto;
-        overflow-y: hidden;
+    .list-window {
+        width: 1270px;
+        height: 200px;
+        margin-top: 15px;
+        overflow: hidden;
     }
 
-    ul {
+    .list{
         height: 120px;
-        li {
-            list-style: none;
+        a {
+            text-decoration: none;
             display: inline-block;
+            margin: 0 5px;
+            padding: 5px;
+            border:1px solid transparent;
             img {
                 width: 100px;
-                height: 80px;
+                height: 150px;
             }
             article{
                 width: 100px;
@@ -51,6 +54,10 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;
             }
+        }
+        a:focus{
+            border-color: #ff0ca2;
+            color: #fffdda;
         }
     }
 

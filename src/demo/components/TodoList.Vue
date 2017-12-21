@@ -4,9 +4,9 @@
       <a href="javascript:" @click="toggle(index)">{{todo.time}} {{isShowList[index]?'▼':'▶'}}</a>
 
         <transition name="fade">
-          <ul v-show="isShowList[index]">
+          <ol v-show="isShowList[index]">
             <li v-for="list in todo.list">{{list}}</li>
-          </ul>
+          </ol>
         </transition>
 
     </div>
@@ -20,11 +20,8 @@
     text-align: left;
     margin-top: 50px;
   }
-  ul {
+  ol {
     font-size: 18px;
-  }
-  ul li{
-
   }
   .first>a{
     text-decoration: none;
