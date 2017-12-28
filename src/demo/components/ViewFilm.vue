@@ -20,5 +20,6 @@
 <style scoped>
     img{
         height: 460px;
+        margin-top: 20px;
     }
 </style>

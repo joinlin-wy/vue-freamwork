@@ -1,7 +1,7 @@
 {
-  "name": "vue-freamwork",
+  "name": "webpack-vue-freamwork",
   "version": "1.0.0",
-  "description": "vue + webpack framework",
+  "description": "vue + webpack framework,for multi-pages web app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node server.js",
@@ -16,7 +16,6 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.3.0",
