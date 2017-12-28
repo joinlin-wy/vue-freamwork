@@ -1,9 +1,10 @@
 **markdowm 在线编辑器**
 >使用Markdown.js转换
-#h1
-##h2
-###h3
-####有序列表
+
+# h1
+## h2
+### h3
+#### 有序列表
 1. 第一点
 2. 第二点
 3. 第三点
@@ -12,7 +13,7 @@
  3. part3
 * 最后一点
 ----
-###优雅的分割线
+### 优雅的分割线
 ***
 #### 无序列表
 * 链接
@@ -28,7 +29,12 @@ I get 10 times more traffic from [Google] [1] than from
   [3]: http://search.msn.com/    "MSN Search"
 * 代码块
 
-         <div>你好</div>
+       build: {
+            index: path.resolve(__dirname, './dist/index.html'),
+            assetsRoot: path.resolve(__dirname, './dist'),
+            assetsPublicPath: '/',//文件引用的相对目录
+            productionSourceMap: true
+        }
 
 行内代码`var date = new Date()`
 

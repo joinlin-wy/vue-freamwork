@@ -1,12 +1,14 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin') //生成html
 //entry添加polyfill用以支持es6的一些内置对象如promise或静态方法如Object.assign等
+// 一个入口对应一个HtmlWebpackPlugin
 const entry = {
-    demo: ["babel-polyfill","./src/demo/app.js"],//一个入口对应一个HtmlWebpackPlugin
+    // demo: ["babel-polyfill","./src/demo/app.js"],
     editor: ["./src/editor/app.js"]
 }
 const config = {
     entry: entry,
+    include: includeDir(),
     plugins: generateHtmlPlugins(),
     build: {
         index: path.resolve(__dirname, './dist/index.html'),
@@ -22,7 +24,13 @@ const config = {
         assetsPublicPath: '/'
     }
 }
+function includeDir() {
+    let base = [path.resolve(__dirname, "src")]
+            //含有const等关键字，也要转化
+     let extend = [path.resolve(__dirname, "node_modules/webpack-dev-server")]
 
+    return process.env.NODE_ENV === 'production' ? base : base.concat(extend)
+}
 function generateHtmlPlugins() {
     let htmlWebpackPlugins = []
     Object.keys(entry).forEach(function (key) {
