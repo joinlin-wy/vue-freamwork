@@ -26,7 +26,7 @@ module.exports = merge(baseWebpackConfig, {
       }
     }),
     new ExtractTextPlugin({
-      filename: "[name]/[name].[contenthash].css"
+      filename: "[name]/[name].css"
     }),
     new CleanWebpackPlugin(
       ['dist'],　 //匹配删除的文件

@@ -8,6 +8,7 @@ const entry = {
 }
 const config = {
     entry: entry,
+    //loader处理范围
     include: includeDir(),
     plugins: generateHtmlPlugins(),
     build: {
